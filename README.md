@@ -15,13 +15,13 @@ iCampus-Android-Restructure
 命名规则
 -------
 
-- #### Java文件
+- Java文件
 
 > - 驼峰命名法 例：MainActivity
 > - Activity以 ‘名词+Activity’ 例：OauthActivity
 > - Fragment以 ‘名词+Fragment’ 例：OauthFragment
 > - 其余java文件必须做到见名之义
 
-- #### 资源文件
+- 资源文件
 
 
