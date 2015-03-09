@@ -95,7 +95,7 @@ public class MainActivity extends ActionBarActivity {
                 GetUserInfo.getUser(MainActivity.this,new GetUserInfo.HandleUser() {
                     @Override
                     public void handleUser(User user) {
-                        info = info + TokenHandle.getAccessToken(MainActivity.this) + "\n" + user;
+                        info = info + TokenHandle.getAccessToken(MainActivity.this) + "\n" + user; 
                         textView.setText(info);
                     }
                 });
