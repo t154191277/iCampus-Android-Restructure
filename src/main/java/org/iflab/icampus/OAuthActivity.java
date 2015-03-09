@@ -83,12 +83,14 @@ public class OAuthActivity extends Activity {
         Map<String, String> params = new HashMap<>();
         params.put(StaticVariable.OauthStaticVariable.KEY_CLIENT_ID, StaticVariable.OauthStaticVariable.CLIENT_ID);
         params.put(StaticVariable.OauthStaticVariable.KEY_REDIRECT_URI, StaticVariable.OauthStaticVariable.REDIRECT_URI);
+        params.put(StaticVariable.OauthStaticVariable.KEY_RESPONSE_TYPE,StaticVariable.OauthStaticVariable.RESPONSE_TYPE);
         String requestUrl = null;
         try {
             requestUrl = OAuthURLUtil.createUrl(UrlStatic.GET_CODE, params);
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println(requestUrl);
         return requestUrl;
     }
 }

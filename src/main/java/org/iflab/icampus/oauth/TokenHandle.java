@@ -7,7 +7,7 @@ import android.content.SharedPreferences;
 /**
  * Created by hcjcch on 2015/2/14.
  */
-public class AccessTokenHandle {
+public class TokenHandle {
     /**
      * 保存access_Token到SharedPreferences
      *
@@ -31,4 +31,30 @@ public class AccessTokenHandle {
         SharedPreferences preferences = context.getSharedPreferences("accessToken", Context.MODE_PRIVATE);
         return preferences.getString("accessToken", null);
     }
+
+    /**
+     * 保存refresh_token到SharedPreferences
+     *
+     * @param context     上下文
+     * @param refreshToken 要保存的refreshToken
+     */
+    public static void saveRefreshToken(Context context, String refreshToken) {
+        SharedPreferences preferences = context.getSharedPreferences("accessToken", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("refreshToken", refreshToken);
+        editor.apply();
+    }
+
+    /**
+     * 从SharedPreferences获取refreshToken
+     *
+     * @param context 上下文
+     * @return refreshToken
+     */
+    public static String getRefreshToken(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences("accessToken", Context.MODE_PRIVATE);
+        return preferences.getString("refreshToken", null);
+    }
+
+
 }
