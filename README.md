@@ -1,4 +1,4 @@
-iCampus-Android-Restructure
+iCampus-Android-Restructura
 ==========================
 
 工程结构
